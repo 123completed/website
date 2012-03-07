@@ -1,0 +1,8 @@
+.ticker-box.acknowledgments blockquote:before {
+	top: .2rem;
+	font-size: 3.3rem;
+}
+.home .ticker-box.acknowledgments blockquote:before {
+	top: .4rem;
+	font-size: 6rem;
+}

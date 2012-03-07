@@ -1,0 +1,8 @@
+
+#AuthUserFile 123completed-website/WebContent/admin/.htpasswd
+AuthUserFile /admin/.htpasswd
+AuthType Basic
+AuthName "Administration"
+Require valid-user
+
+ErrorLog /logs

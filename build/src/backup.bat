@@ -1,0 +1,12 @@
+
+ECHO.
+ECHO.[INFO] backup invoked...
+
+DEL %BACKUP_OLD% /F /S /Q
+
+XCOPY %BACKUP_NEW% %BACKUP_OLD% /S /Q
+
+DEL %BACKUP_NEW% /F /S /Q
+
+XCOPY %DEPLOY_DIR% %BACKUP_NEW% /S /Q
+
