@@ -54,37 +54,6 @@
 		});
 	};
 
-/*
-	C123.Util.Fn.Ajax.loadDynamicContent = function() {
-
-		C123.Util.Fn.Ajax.loadAsObject(
-			C123.Util.Constants.SNIPPETS_PATH + 'components.html'
-		,	function(responseText) {
-
-				var $responseText = $(responseText);
-				var $ackTickerComponent = $responseText.find('#ack-ticker').contents();
-
-				// only on home page:
-				if (C123.Util.Variables.isHomePage) {
-
-					$ackTickerComponent.addClass('grid_10 prefix_1 suffix_1');
-					$('#acknowledgments-container').prepend($ackTickerComponent);
-
-				} else {
-
-					// TODO: replace with content load only
-					$('#sidebar .sidebar-wrapper').prepend($ackTickerComponent);
-				}
-
-				// activate widgets
-				C123.Util.Fn.Activation.initMainNavigation('#main-nav');
-				C123.Util.Fn.Activation.initNewsTicker('.ticker-box.news .ticker');
-				C123.Util.Fn.Activation.initAcknowledgmentsTicker('.ticker-box.acknowledgments .ticker');
-			}
-		);
-	};
-*/
-
 
 	/**
 	 * JSON requests over Ajax:
@@ -106,8 +75,10 @@
 				var $acksContainer = $('.ticker-box.acknowledgments .ticker');
 				var $newsContainer = $('.ticker-box.news .ticker');
 
-// var start = new Date();
-// console.debug(new Date().getMilliseconds());
+				// TODO: benchmark
+				// var start = new Date();
+				// console.debug(new Date().getMilliseconds());
+ 				
  				// parse acknowledgments from JSON data and attach to the DOM 
 				for (var n in acks) {
 					var entry = acks[n];
@@ -117,7 +88,8 @@
 						$('<p />').text(entry.ref).addClass('ref')
 					).appendTo($acksContainer);
 				}
- // console.debug(new Date().getMilliseconds());
+				
+				// console.debug(new Date().getMilliseconds());
 
  				// parse news from JSON data and attach to the DOM 
 				for (var n in news) {
