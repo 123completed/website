@@ -22,48 +22,12 @@
 	C123.Util.Constants.CSS_PATH = C123.Util.Constants.BASE_PATH + 'css/';
 
 
-	/* VARIABLES */
-
-	C123.Util.Variables = {};
-
-	C123.Util.Variables.isHomePage = false;
-
-
 	/* FUNCTIONS */
 
 	C123.Util.Fn = {};
 
-
-	C123.Util.Fn.State = {};
-
-	C123.Util.Fn.State.setHomePageFlag = function() {
-		var docURL = document.URL;
-		C123.Util.Variables.isHomePage =
-				(docURL.indexOf('index.html') != -1 || docURL.indexOf('.com') == docURL.length - 5);
-	};
-
-
-	C123.Util.Fn.Load = {};
-
-
 	C123.Util.Fn.Ajax = {};
 
-	C123.Util.Fn.Ajax.loadAsObject = function(path, onSuccessFn) {
-		return $('<div />').load(path, function(responseText, responseStatus, jqXmlHttpRequest) {
-			onSuccessFn && onSuccessFn(responseText, responseStatus, jqXmlHttpRequest);
-		});
-	};
-
-
-	/**
-	 * JSON requests over Ajax:
-	 * 
-	 * dynamic-data.json: all string values should be normalized and must validate as strict HTML. 
-	 * i.e. forbidden characters (e.g. '<', '&') should be replaced with their corresponding HTML entities.
-	 */
-	
-	// TODO: inject into homepage
-	
 	C123.Util.Fn.Ajax.loadDynamicContent = function() {
 		
 		$.getJSON(
