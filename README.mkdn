@@ -5,16 +5,15 @@ pull requsets will only be allowd for 1 2 3 Completed members, or co-developers.
 
 ### project structure
 the project contains 4 main modules, each with a definitive purpose:
-* build - contains (windows) shell scripts for building the sources as 
-preperation for local deployment, or staging.
-* stage - provides an AJAX server (relaying on an Apache instance), for the 
-local deployment, as means of staging the website prior to remote deployment.
-* resources - has various resources used during the development.
-* WebContent - is the folder representing the deployed sources on the server.
+
+* **build** - contains (windows) shell scripts for building the sources as preperation for local deployment, or staging.
+* **stage** - provides Jaxer - an AJAX server (relaying on an Apache instance), for the local deployment, as means of staging the website prior to remote deployment.
+* **resources** - has various resources used during the development.
+* **WebContent** - is the folder representing the deployed sources on the server.
 
 ### instructions on configuration and build process
 it's highly reccomended to download and install [aptana studio](http://www.aptana.com/products/studio3/download) 
-plugin for eclipse. this has an embedded AJAX server, and will allow running 
+plugin for eclipse. it has an embedded AJAX server, and will allow running 
 the website during development with no build required (any other server will, 
 of course, work too).
 
