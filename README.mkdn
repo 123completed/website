@@ -3,31 +3,72 @@
 this is a port of an eclipse project, for the [1 2 3 Completed website](http://www.123completed.com).
 pull requsets will only be allowd for 1 2 3 Completed members, or co-developers.
 
-### project structure
-the project contains 4 main modules, each with a definitive purpose:
+
+## project structure
+the project contains 3 main modules, each with a definitive purpose:
 
 * **build** - contains (windows) shell scripts for building the sources as preperation for local deployment, or staging.
-* **stage** - provides *Jaxer* - an AJAX server (relaying on an Apache instance), for the local deployment, as means of staging the website prior to remote deployment.
 * **resources** - has various resources used during the development.
 * **WebContent** - is the folder representing the deployed sources on the server.
 
-### instructions on configuration and build process
-*it's highly reccomended to download and install [aptana studio](http://www.aptana.com/products/studio3/download) plugin for eclipse. it has an embedded Jaxer, and will allow running the website during development with no build required (any other server will, of course, work too).*
+
+## dependencies
+this project relay on the following:
+
+* *Jaxer* - an AJAX server (relaying on an Apache instance), for the local deployment, as means of staging the website prior to remote deployment. it can be downloaded from [my dropbox](https://www.dropbox.com/home/123completed/website).
+* *YUI compressor* - required for script minification (mandatory for remote deployment), you can download it at yahoo!'s [YUI libraries](http://yuilibrary.com/download/yuicompressor/).
+
+
+## on configuration and building
+*it's highly reccomended to download and install the [aptana studio](http://www.aptana.com/products/studio3/download) plugin for eclipse. it has an embedded Jaxer, and will allow running the website during development with no build required (any other server will, of course, work too).*
+
+the `build.bat` file is the entry point for the build process, it's serving several purposes:
+
+1. copy files from the WebContent folder to the external Jaxer's public folder.
+2. update all URL references by trimming the '123completed-website/WebContent/ prefix.
+3. pass all relevent JavaScript / CSS scripts through a script minifier / obfuscuator (optional).
+4. copy files from the Jaxer's public folder to a backup folder on the hard drive (optional).
+
+###### important
+
+*in order to use the backup option of the build script, you must create a local backup directory with the following structure:*
+    
+    backup-dir
+    |
+    +---old
+    |   |
+    |   \---123completed-site-deployment
+    |
+    \---new
+        |
+        \---123completed-site-deployment
 
 
 
-### author
-Eliran Malka ([LinkedIn](http://www.linkedin.com/profile/edit?goback=%2Enpe_*1_*1_*1_*1_*1_*1&trk=tab_pro))
+*before using the `build.bat`, you must configure `set-env.bat` by editing the following environment variables:*
+
+  * `SRC=[your\workspace\path]\123completed-website\WebContent`
+  * `JAXER_WORK_DIR=[your\external\Jaxer\path]\Jaxer\public`
+  * `BACKUP_DIR=[your\backup\directory\path]`
+  * `YUI_COMP_HOME=[your\YUIcompressor\installation\path]\yuicompressor-2.4.7\build\yuicompressor-2.4.7.jar`
 
 
+### guidelines
+the workflow will include three cycles:
+
+* **development** - altering the sources, and running them using a preview server.
+* **staging** - activating the `build.bat` process with the desired parameters ('`deploy minify`' is the default), and running on the external Jaxer instance.
+* **deployment** - using an FTP client ([FileZilla](http://filezilla-project.org/download.php?type=client), for instance) to deploy sources from the Jaxer public folder to the remote host @ http://www.123completed.com(:21). user name and password will be supplied for authored parties.
 
 
+## issue tracking
+to submit bugs, feature requests, patches, or to open new issues, please refer to this github account's [issues list](https://github.com/123completed/website/issues?sort=created&direction=desc&state=open).
 
 
-instructions to submit bugs, feature requests, submit patches, join mailing list, get announcements, or join the user or dev community in other forms
+## author
+Eliran Malka
 
-other contact info (email address, website, company name, address, etc)
 
-a brief history if it's a replacement or a fork of something else
-
-legal notices (crypto stuff)
+### contact info
+email: eliranm@123completed.com
+LinkedIn: http://www.linkedin.com/profile/edit?goback=%2Enpe_*1_*1_*1_*1_*1_*1&trk=tab_pro
