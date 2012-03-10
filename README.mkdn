@@ -66,9 +66,8 @@ to submit bugs, feature requests, patches, or to open new issues, please refer t
 note that issues are tagged with 'P' labels for prioritizing, and 'T' labels for issue type, please label new issues when filing them.
 
 
-### author
+## author
 Eliran Malka
-
 
 ### contact info
 
