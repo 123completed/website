@@ -47,10 +47,10 @@ the `build.bat` file is the entry point for the build process, it's serving seve
 
 *before using the `build.bat`, you must configure `set-env.bat` by editing the following environment variables:*
 
-  * `SRC=[your\workspace\path]\123completed-website\WebContent`
-  * `JAXER_WORK_DIR=[your\external\Jaxer\path]\Jaxer\public`
-  * `BACKUP_DIR=[your\backup\directory\path]`
-  * `YUI_COMP_HOME=[your\YUIcompressor\installation\path]\yuicompressor-2.4.7\build\yuicompressor-2.4.7.jar`
+* `SRC=[your\workspace\path]\123completed-website\WebContent`
+* `JAXER_WORK_DIR=[your\external\Jaxer\path]\Jaxer\public`
+* `BACKUP_DIR=[your\backup\directory\path]`
+* `YUI_COMP_HOME=[your\YUIcompressor\installation\path]\yuicompressor-2.4.7\build\yuicompressor-2.4.7.jar`
 
 
 ### guidelines
@@ -62,13 +62,15 @@ the workflow will include three cycles:
 
 
 ## issue tracking
-to submit bugs, feature requests, patches, or to open new issues, please refer to this github account's [issues list](https://github.com/123completed/website/issues?sort=created&direction=desc&state=open).
+to submit bugs, feature requests, patches, or to open new issues, please refer to this github account's [issues list](https://github.com/123completed/website/issues?sort=created&direction=desc&state=open). 
+note that issues are tagged with 'P' labels for prioritizing, and 'T' labels for issue type, please label new issues when filing them.
 
 
-## author
+### author
 Eliran Malka
 
 
 ### contact info
-email: eliranm@123completed.com
-LinkedIn: http://www.linkedin.com/profile/edit?goback=%2Enpe_*1_*1_*1_*1_*1_*1&trk=tab_pro
+
+* email: eliranm[at]123completed[dot]com
+* LinkedIn: http://www.linkedin.com/profile/edit?goback=%2Enpe_*1_*1_*1_*1_*1_*1&trk=tab_pro
