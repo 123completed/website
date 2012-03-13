@@ -58,7 +58,7 @@ the workflow will include three cycles:
 
 * **development** - altering the sources, and running them using a preview server.
 * **staging** - activating the `build.bat` process with the desired parameters ('`deploy minify`' is the default), and running on the external Jaxer instance.
-* **deployment** - using an FTP client ([notepad++](http://notepad-plus-plus.org/) has one, the aptana plugin for eclipse provides one, or you can use the fine [FileZilla](http://filezilla-project.org/download.php?type=client)) to deploy sources from the Jaxer public folder to the remote host @ http://www.123completed.com(:21). user name and password will be supplied for authored parties.
+* **deployment** - using an FTP client ([notepad++](http://notepad-plus-plus.org/) has one, the aptana plugin for eclipse provides one, or you can use the fine [FileZilla](http://filezilla-project.org/download.php?type=client)) to deploy sources from the Jaxer public folder to the remote host at http://www.123completed.com(:21). user name and password will be supplied for authored parties.
 
 
 ## issue tracking
