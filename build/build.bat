@@ -6,10 +6,10 @@
 :: each argument is optional, order of parameters is significant.
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:: If no arguments passed - reCALL this script with default configuration (all activated).
-IF "%1"=="" GOTO all
+:: If no arguments passed - recall this script with default configuration.
+IF "%1"=="" GOTO default
 
-:: Delegates a CALL to SET local variables according to the specified phases.
+:: Delegates a call to set local variables according to the specified phases.
 CALL %~dp0\src\set-env.bat %*
 
 :: Clear log files
@@ -34,6 +34,6 @@ IF "%0"=="minify" GOTO minify
 	CALL %~dp0\src\minify.bat > %LOGS_DIR%\minify.log 2>&1
 	GOTO params
 
-:all
-	CALL %~dp0\build.bat backup deploy minify
+:default
+	CALL %~dp0\build.bat deploy minify
 

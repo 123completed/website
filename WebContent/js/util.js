@@ -199,8 +199,6 @@
 	 * flow invocations
 	 */
 
-	C123.Util.Fn.State.setHomePageFlag();
-
 	C123.Util.Fn.Style.loadingMaskShow();
 		
 	$(document).ready(function(){
