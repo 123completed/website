@@ -69,6 +69,10 @@
 		,	"ref" : "HP Software"
 		}
 	,	{
+			"quote" : "Your knowledge and capabilities about databases is very significant and was crucial for the success of our project."
+		,	"ref" : "Ohad Maislish, R&D team leader, VMWare."
+		}
+	,	{
 			"quote" : "123 Completed has provided Mobixell with a high quality project that meets all requirements... We at Mobixell recommend 123Completed services to all."
 		,	"ref" : "Oren Zucker, Infrastructure and Projects Group Manager, Mobixell"
 		}
@@ -84,6 +88,12 @@
 			"quote" : "I would like to thank you for your contribution to the significant performance improvement..."
 		,	"ref" : "Miri Curiel, VP of R&D, Orca Interactive"
 		}
+	,	{
+			"quote" : "Without your great help, I am sure the project we had would have never been finished on time"
+		,	"ref" : "Ohad Maislish, R&D team leader, VMWare."
+		}
+
+		
 	]
 ,	"news" : [
 		{
